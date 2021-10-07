@@ -623,7 +623,7 @@ static int const RCTVideoUnset = -1;
           NSString *value = (NSString *)item.value;
           NSString *identifier = item.identifier;
           
-          if (![value isEqual: [NSNull null]]) {
+          if (![value isEqual: [NSNull null]] && identifier != nil) {
             NSDictionary *dictionary = [[NSDictionary alloc] initWithObjects:@[value, identifier] forKeys:@[@"value", @"identifier"]];
             
             [array addObject:dictionary];
